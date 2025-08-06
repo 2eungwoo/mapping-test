@@ -11,14 +11,21 @@ import java.util.ArrayList;
 import java.util.List;
 import lombok.Getter;
 
-@Getter
+//@Getter
+//@Entity
+//@Table(name = "orders")
+//public class Order {
+//    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    private Long id;
+//
+//    @OneToMany
+//    @JoinColumn(name = "order_id")
+//    private List<OrderItem> items = new ArrayList<>();
+//}
+
 @Entity
 @Table(name = "orders")
 public class Order {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @OneToMany
-    @JoinColumn(name = "order_id")
-    private List<OrderItem> items = new ArrayList<>();
 }
